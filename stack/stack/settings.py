@@ -91,3 +91,12 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+
+# Adding pipeline and the database settings
+ITEM_PIPELINES = ['stack.pipeline.MongoDBPipeline', ]
+
+MONGODB_SERVER ="localhost"
+MONGODB_PORT ="27017"
+MONGODB_DB = "stackoverflow"
+mongodb_collection = "questions"
